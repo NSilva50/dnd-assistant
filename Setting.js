@@ -33,7 +33,7 @@ function generateCiv(name, population, landmarks) {
   return { civType, military, government, faith, terrain, weather, income, location};
 }
   
-export class Civilizations {
+class Civilizations {
   constructor(name, population, landmarks) {
     this.name = name;
     this.population = population;

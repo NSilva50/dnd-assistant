@@ -1,50 +1,26 @@
-// Classes
-class Character { // Class for characters
-  constructor(name, type, race, charClass, level, attributes,
-    skills, proficiency, initiative, background, languages, inventory) {
+class Race {
+  constructor(name, speed, vision, savingThrows, skills) {
     this.name = name;
-    this.type = type;
-    this.race = race;
-    this["class"] = charClass;
-    this.level = level;
-    this.attributes = attributes;
+    this.speed = speed;
+    this.vision = vision;
+    this.savingThrows = savingThrows;
     this.skills = skills;
-    this.proficiency = proficiency;
-    this.initiative = initiative;
-    this.background = background;
-    this.languages = languages;
-    this.inventory = inventory;
-    Character.characters.push(this);
   }
 }
-// to store characters
-Character.characters = [];
+// an array to store base and future races
+const races = [];
+const dwarves = new Race("Dwarve", 25, "darkvision",
+{poison: {advantage: true, resistance: true}},
+["Perception", "Survival"]);
 
-class CharacterClass { // Class for character class
-  constructor(name, hitDice, attributes, 
-    skills, languages, classFeatures) {
-    this.name = name;
-    this.hitDice = hitDice;
-    this.attributes = attributes;
-    this.skills = skills;
-    this.languages = languages;
-    this.classFeatures = classFeatures;
-    CharacterClass.characterClass.push(this);
+function generateCharacter(name) {
+  // in future I want to option to have name generated
+  if (this.name == null){ // It will always will be a morty
+    this.name = 'Morty';
+  } else { // or you have a name
+    this.name= name;
   }
+  this.Race = dwarves;
+  
+  // complete simple race details to prep for future
 }
-// may have to change later
-CharacterClass.characterClass = [];
-
-class Background { // class for background
-  constructor(name, alignment, personality, equipment) {
-    this.name = name;
-    this.alignment = alignment;
-    this.personality = personality;
-    this.equipment = equipment;
-    Background.backgrounds.push(this);
-  }
-}
-// to store backgrounds
-Background.backgrounds = [];
-
-generateCharacter()

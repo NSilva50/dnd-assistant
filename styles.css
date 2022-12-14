@@ -1,0 +1,47 @@
+Copy code
+.container {
+  width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+form {
+  border: 1px solid #ddd;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 10px 30px 5px rgba(0, 0, 0, 0.3);
+}
+
+form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+form input[type="text"],
+form select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+form .form-group.row input[type="text"] {
+  width: 30%;
+  margin: 10px;
+}
+
+form button {
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #444;
+}
